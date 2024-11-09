@@ -1,203 +1,166 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radwan's Tech Portfolio</title>
-    <style>
-        /* Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Body */
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #f5f7fa;
-            color: #333;
-        }
-
-        /* Header Section */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 1200px;
-            padding: 20px;
-            background-color: #34495e;
-            color: white;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
-        }
-
-        header h1 {
-            font-size: 2em;
-            font-weight: bold;
-            color: #ecf0f1;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav ul li {
-            display: inline;
-        }
-
-        nav ul li a {
-            color: #ecf0f1;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1em;
-            padding: 10px 20px;
-            border-radius: 8px;
-            transition: background-color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #2c3e50;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 40px;
-            background-color: #dfe6e9;
-            border-radius: 15px;
-            width: 80%;
-            max-width: 1000px;
-            margin: 20px auto;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .hero h2 {
-            font-size: 2.5em;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.2em;
-            color: #7f8c8d;
-            margin-bottom: 30px;
-        }
-
-        .hero button {
-            padding: 12px 30px;
-            font-size: 1em;
-            color: #2c3e50;
-            background-color: #ecf0f1;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s;
-        }
-
-        .hero button:hover {
-            background-color: #bdc3c7;
-        }
-
-        /* Projects Section */
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            justify-content: center;
-        }
-
-        .project-card {
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            width: 250px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-card h3 {
-            color: #34495e;
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            color: #7f8c8d;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #34495e;
-            color: #ecf0f1;
-            padding: 20px;
-            width: 100%;
-            text-align: center;
-            margin-top: 30px;
-            box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <title>Radwan's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 
-    <!-- Header with Navigation -->
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Header Section -->
     <header>
-        <h1>Radwan's Portfolio</h1>
+        <div class="logo">Radwan</div>
         <nav>
-            <ul>
-                <li><a href="#home">home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Welcome to Radwan's Tech Portfolio</h2>
-        <p>Explore my work in cloud engineering.</p>
-        <button>Discover My Projects</button>
-    </section>
-    
-    <!-- Projects Section -->
-    <section class="projects">
-        <div class="project-card">
-            <h3>Project 1 🚀 Automation with AWS CloudFormation 🚀 </h3>
-        </div>
-        <div class="project-card">
-            <h3>Project 2</h3>
-            <p>Brief description of the project goes here.</p>
-        </div>
-        <div class="project-card">
-            <h3>Project 3</h3>
-            <p>Brief description of the project goes here.</p>
-        </div>
-        <div class="project-card">
-            <h3>Project 4</h3>
-            <p>Brief description of the project goes here.</p>
-        </div>
-    </section>
-    
-    <h1 id="cat">hello world</h1>
-    <!-- Footer -->
-    <footer>
-        <p>Contact me at: radwan@example.com</p>
-    </footer>
 
+    <!-- Home Section -->
+    <section id="home">
+        <div class="hero-content">
+            <h1>Hi There,<br> I'm <span class="highlight">Radwan</span></h1>
+            <p>I am a Cloud Engineer with a passion for technology and problem-solving. My expertise lies in cloud architecture, automation, and infrastructure management. I have experience in various AWS services and am continuously expanding my knowledge to keep up with industry advancements.</p>
+            <a href="#about" class="btn">About Me</a>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/radwan" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/radwan" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div>
+            <img src="images/openart-image_MPNMvjxG_1730980746920_raw.png" alt="Profile Image" class="profile-image">
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-container">
+            <div class="image-container">
+                <img src="images/DALL·E 2024-11-08 20.30.20 - A realistic, friendly illustration of a Black professional in a modern tech setting, wearing a business-casual outfit, with a welcoming smile. The cha.webp" alt="Profile Image" class="profile-image">
+            </div>
+            <div class="text-container">
+                <h2>About Me</h2>
+                <p1>Hello! I'm Radwan, a passionate Cloud Engineer with a diverse background in technology and a keen interest in leveraging cloud solutions to drive efficiency and innovation. With a strong foundation in AWS and hands-on experience with various cloud technologies, I'm dedicated to crafting scalable, resilient, and secure architectures.
+    
+                My journey began with a Bachelor’s degree in Quantity Surveying, but my interest in technology and the cloud drove me to further my skills through intensive training and certifications. I am an AWS re/Start graduate and have developed a strong technical skill set in AWS services, Linux, and DevOps practices.
+    
+                In previous roles, I've excelled in environments that required technical problem-solving, teamwork, and a strategic approach to handling complex tasks. Whether it's automating deployments, optimizing infrastructure, or ensuring smooth operations, I’m committed to delivering impactful solutions.
+    
+                Outside of tech, I’m an avid sports enthusiast and enjoy tennis, boxing, and football, which help me stay disciplined, strategic, and focused on my goals. I’m always eager to learn, collaborate, and contribute to projects that push the boundaries of what’s possible in cloud technology.</p1>
+            
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <i class="fab fa-aws"></i>
+                <h3>AWS</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-linux"></i>
+                <h3>Linux</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-github"></i>
+                <h3>GitHub</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-cogs"></i>
+                <h3>DevOps</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-docker"></i>
+                <h3>Docker</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-github"></i>
+                <h3>GitHub Actions</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-terraform"></i>
+                <h3>Terraform</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <h3>HTML</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-kubernetes"></i>
+                <h3>Kubernetes</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-git"></i>
+                <h3>Git</h3>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>🌟 Navigating AWS CloudTrail and Athena to Enhance Cloud Security! 🌟</h3>
+            <p>I have been diving deeper into AWS CloudTrail and Athena, honing my skills in analysing logs and improving cloud security. Here's a glimpse of what I’ve been working on recently:</p>
+    
+            <h4>🔍 CloudTrail Log Analysis:</h4>
+            <p>I leveraged the AWS CLI CloudTrail commands to track actions taken on critical AWS resources, including security groups. By using advanced filters, I narrowed down logs to identify key events such as unauthorized modifications to security groups.</p>
+    
+            <h4>💻 Using Athena for Querying Logs:</h4>
+            <p>As an alternative to CLI-based analysis, I created Athena tables to analyse CloudTrail logs using SQL queries. This helped streamline the process, allowing me to efficiently filter through large datasets and pinpoint the security breach.</p>
+    
+            <h4>🚀 Incident Resolution & Remediation:</h4>
+            <ul>
+                <li>Discovered unauthorized SSH access by running OS-level commands to identify rogue users and successfully removed them.</li>
+                <li>Updated SSH configurations, eliminating password authentication vulnerabilities and restricting access to secure key pairs only.</li>
+                <li>Restored compromised website content and closed security loopholes, such as wide-open SSH port access.</li>
+            </ul>
+    
+            <h4>📈 Key Takeaways:</h4>
+            <ul>
+                <li><strong>Proactive Log Monitoring:</strong> Constant vigilance is crucial, especially for EC2 instances and security groups.</li>
+                <li><strong>Command Line & SQL Synergy:</strong> Combining AWS CLI and Athena queries ensures a comprehensive approach to security incident investigation.</li>
+                <li><strong>Security Best Practices:</strong> Locking down SSH access and regularly auditing user permissions are essential to prevent future breaches.</li>
+            </ul>
+    
+            <p>It’s been an incredible learning experience, and I’m excited to continue enhancing my skills in cloud security and automation.</p>
+        </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p class="contact-info">Email: radwan@example.com</p>
+    </section>
+
+    <script src="particles.js"></script>
 </body>
 </html>
+
+
