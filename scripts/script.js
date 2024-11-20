@@ -82,3 +82,5 @@ window.addEventListener('resize', () => {
 
 initParticles();
 animateParticles();
+
+console.log("Radwan")
