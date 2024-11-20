@@ -26,4 +26,4 @@ jobs:
           AWS-SECRET-ACCESS-KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Deploy web app
-        run: aws s3 sync s3://radwan-tech-bucket --delete
+        run: aws s3 sync ./client s3://radwan-tech-bucket --delete
